@@ -147,9 +147,7 @@ rule align_to_genome:
             genome_id = config["genome_id"])
     version: "1.0"
     shell:
-        """
-        bowtie2 -x intermediate/{config[genome_id]} -U {input.fastq} > {output} 2>{log}
-        """
+       
 
 rule sort_bam:
     """
